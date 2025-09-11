@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 500;
+            font-style:initial;
+            background-color: gray;
+            background: azure;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+            min-width: 100vh;
+            margin-top: 0px;
+        }
+        .container{
+            background-color: rgb(189, 212, 247);
+            margin-top: 7px;
+            border-radius: 10px;
+            box-shadow: 2px 5px 12px 5px;
+        }
+        .row{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2px;
+            margin: 12px;
+            align-items: center;
+        }
+       input, select {
+    transition: border-color 0.3s ease;
+}
+
+        input:focus select:focus{
+                border-color: aqua;
+        }
+        button:hover{
+            background: grey;
+        }
+        @media (max-width:600px) {
+            .row{
+                grid-template-columns: 1fr;
+            }   
+         @media (min-width:601px) and (max-width:1024px) {
+            .row{
+                grid-template-columns: 1fr 1.4fr;
+            }
+         }   
+        }
+    </style>
+</head>
+<body >
+    <fieldset>
+          <legend style="text-align: center">Student Regsitertion Form</legend><br>
+    <div class="container">
+    <form action="">
+        <div class="First">
+            <label>First Name :</label>
+            <input type="text" placeholder="First Name"><br>
+        </div>
+        <div class="Last">
+            <label >Last Name :</label>
+            <input type="text" placeholder="Last Name"><br>
+        </div>
+        <div>
+            <label >Gender :</label>
+            <input type="radio" name="gender">Male
+            <input type="radio" name="gender">Female
+            <input type="radio" name="gender">Other <br>
+        </div>
+        <div>
+            <label>Hobby</label><br>
+            <textarea rows="2" cols="20"></textarea><br>
+        </div>
+        <div>
+            <label >email:</label>
+            <input type="email" required ><br>
+        </div>
+        <div>
+            <label>Password:</label>
+            <input type="password" required><br>
+            <button>submit</button>
+        </div>
+    </form>
+    </div>
+    </fieldset>
+</body>
+</html>
